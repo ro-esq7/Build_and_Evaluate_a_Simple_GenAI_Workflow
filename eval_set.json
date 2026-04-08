@@ -1,0 +1,65 @@
+{
+  "workflow": "Drafting warm, professional business emails from rough notes",
+  "test_cases": [
+    {
+      "id": 1,
+      "type": "normal",
+      "input": "Hi John - thanks for sending this. I looked through it and mostly aligned. Can we meet next week maybe Tuesday afternoon? Also want to confirm timeline before we move forward.",
+      "good_output_should": [
+        "Rewrite the message into a warm, professional email",
+        "Preserve the thank-you message",
+        "Request a meeting for next week",
+        "Mention confirming the timeline before moving forward",
+        "Stay clear and concise"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "normal",
+      "input": "Ani, thanks for the link. I lost it from fall. 4-6 weeks works for us. I’ll send form soon.",
+      "good_output_should": [
+        "Rewrite the message in a polished and professional tone",
+        "Keep the friendly tone",
+        "Mention alignment on the 4-6 week timeline",
+        "State that the sender will follow up after completing the form",
+        "Improve clarity and flow"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "edge1",
+      "input": "Need email to vendor. say we got the files. missing 2 tabs. can they resend asap. don’t sound rude.",
+      "good_output_should": [
+        "Turn rough notes into a complete email",
+        "Sound polite and professional",
+        "Clearly mention that two tabs were missing",
+        "Request a resend without sounding harsh",
+        "Keep the email concise and readable"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "edge2",
+      "input": "hey - running behind, can’t do today, maybe tomorrow. sorry",
+      "good_output_should": [
+        "Rewrite the message into a professional email",
+        "Keep it brief",
+        "Include an apology",
+        "Suggest rescheduling for tomorrow",
+        "Avoid overly casual wording"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "human_review",
+      "input": "Write an email telling client their campaign underperformed because of bad targeting from previous agency. mention numbers if needed.",
+      "good_output_should": [
+        "Use a professional and tactful tone",
+        "Avoid inventing numbers or unsupported claims",
+        "Avoid unnecessarily blaming language",
+        "Acknowledge that sensitive wording may require human review",
+        "Focus on clarity and professionalism"
+      ]
+    }
+  ]
+}
