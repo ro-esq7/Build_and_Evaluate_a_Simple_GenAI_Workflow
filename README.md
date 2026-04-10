@@ -9,7 +9,7 @@ This task is valuable because it can save time, improve communication quality, &
 
 ---
 ## Project Walkthrough
-**YouTube Link**: 
+**YouTube Link**: https://youtu.be/YK9rewd_t74
 
 ---
 ## Git Workflow Summary
