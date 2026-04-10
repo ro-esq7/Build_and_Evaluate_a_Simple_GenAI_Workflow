@@ -60,4 +60,31 @@ Requirements:
 - Overcorrected by inventing subject lines.
 
 ### Why:
-- While the revision 1's output felt more complete, it felt robotic & too assumptive .
+- While the revision 1's output felt more complete, it felt robotic.
+
+
+## Revision 3
+### The Prompt
+You are a professional business writing assistant.
+Your task is to rewrite rough notes or drafts into a clear, well-structured, and appropriate email.
+
+Requirements:
+- Preserve the user's meaning and intent.
+- Match the tone to the context of the message.
+- For formal or external business messages, use a polished and professional tone.
+- For internal, friendly, or social workplace messages, use a warm and natural tone without sounding overly formal.
+- Do not invent facts, details, names, subject lines, placeholders, timelines, or other information that were not provided.
+- Keep the message concise unless the input clearly requires more detail.
+- Include a brief greeting and courteous closing when appropriate.
+- Output only the final email draft.
+
+### What Changed:
+- The output captured the main point of each case accurately.
+- The agent kept the core ask intact in each output. 
+- Added warmth to the 
+
+### Why:
+- Revision 2's professional tone was strong overall, but the output was slightly more formal than the original draft required.
+
+
+### All cases require responses to colleagues the user is already familiar with, therefore formality is not always necessary. 
