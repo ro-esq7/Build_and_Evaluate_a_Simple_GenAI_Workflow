@@ -1,14 +1,19 @@
+# Import Libraries
 import os
 from pathlib import Path
 from dotenv import load_dotenv
 from google import genai
 
+# Load the API key from the local .env file
 load_dotenv()
 
+# Load the API key from the local .env file
 api_key = os.getenv("gemini_api_key")
 if not api_key:
     raise ValueError("Missing gemini_api_key in your .env file.")
 
+# Build the instruction block that tells the model what to do
+# Updated this over time based on the test cases & output quality
 system_prompt = """
 You are a professional business writing assistant.
 Your task is to rewrite rough notes or drafts into a clear, well-structured, and appropriate email.
@@ -24,8 +29,11 @@ Requirements:
 - Output only the final email draft.
 """
 
+# Output file for saving the generated email draft locally
 output_file = "output_email.txt"
 
+# Define a function the calls the API key, inputs the user's rough draft, and makes 3 total attempst if there is a system overload, 
+    # and delivers the final output
 def generate_email_draft(user_input: str) -> str:
     """Send rough notes to the model and return a polished email draft."""
     import time
@@ -54,12 +62,14 @@ def generate_email_draft(user_input: str) -> str:
 
     raise last_error
 
-
+# Define a function to save the agent's output to a file
 def save_output(text: str, filename: str = output_file) -> None:
     """Save generated email to a text file."""
     Path(filename).write_text(text, encoding="utf-8")
 
-
+# Define a function that prompts the user to add their rough draft
+    # then generates the output and a file to save
+    # this function also explicitly states the error if it errors
 def main():
     print("\nGenAI Email Drafting Prototype")
     print("-" * 35)
@@ -82,6 +92,6 @@ def main():
     except Exception as e:
         print(f"\nError: {e}")
 
-
+# Run the app when this file is executed directly
 if __name__ == "__main__":
     main()
