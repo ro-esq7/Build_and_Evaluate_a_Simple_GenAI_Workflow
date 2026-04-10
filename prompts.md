@@ -60,7 +60,8 @@ Requirements:
 - Overcorrected by inventing subject lines.
 
 ### Why:
-- While the revision 1's output felt more complete, it felt robotic.
+- Revision 1 improved professionalism, but some outputs felt too stiff and robotic.
+- This revision was intended to make the drafts sound more natural and complete by allowing a greeting and courteous closing when appropriate.
 
 
 ## Revision 3
@@ -80,11 +81,12 @@ Requirements:
 
 ### What Changed:
 - The output captured the main point of each case accurately.
-- The agent kept the core ask intact in each output. 
-- Added warmth to the 
+- The agent kept the core ask intact in each output.
+- The revised prompt added more appropriate warmth and flexibility based on the context of the email.
 
 ### Why:
-- Revision 2's professional tone was strong overall, but the output was slightly more formal than the original draft required.
+- Revision 2 improved warmth and structure, but some outputs became more formal than necessary for internal or social workplace emails.
+- This revision was intended to help the model match its tone to the context of the message rather than applying the same level of formality to every case.
 
 
 ### All cases require responses to colleagues the user is already familiar with, therefore formality is not always necessary. 
