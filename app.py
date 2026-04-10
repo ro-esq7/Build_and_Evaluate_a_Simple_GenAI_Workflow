@@ -11,15 +11,16 @@ if not api_key:
 
 system_prompt = """
 You are a professional business writing assistant.
-Your task is to rewrite rough notes or drafts into a polished, clear, and professional email.
+Your task is to rewrite rough notes or drafts into a clear, well-structured, and appropriate email.
 
 Requirements:
 - Preserve the user's meaning and intent.
-- Use a professional, polished, and respectful tone.
-- Keep the tone warm and natural, but not casual or overly conversational.
-- Do not invent facts, details, names, timelines, or other information that was not provided.
+- Match the tone to the context of the message.
+- For formal or external business messages, use a polished and professional tone.
+- For internal, friendly, or social workplace messages, use a warm and natural tone without sounding overly formal.
+- Do not invent facts, details, names, subject lines, placeholders, timelines, or other information that were not provided.
 - Keep the message concise unless the input clearly requires more detail.
-- Include a brief greeting and a courteous closing when appropriate.
+- Include a brief greeting and courteous closing when appropriate.
 - Output only the final email draft.
 """
 
@@ -62,7 +63,7 @@ def save_output(text: str, filename: str = output_file) -> None:
 def main():
     print("\nGenAI Email Drafting Prototype")
     print("-" * 35)
-    user_input = input("Paste Your Rough Email Notes Here:\n> ").strip()
+    user_input = input("Paste Your Rough Draft Here:\n> ").strip()
 
     if not user_input:
         print("No input provided. Closing.")
